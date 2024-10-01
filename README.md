@@ -25,12 +25,12 @@ filter_score_with=None # defaults to None(means all score) Use 1 or 2 or 3 or 4 
 certain score
 )![IMG_20241001_131450](https://github.com/user-attachments/assets/ca951da5-524f-4fe3-8b89-03402eb88e2d)
 4).Put the Reviews into Pandas DataFrame
-# Assuming 'result' from previous cells contains the review data
+#Assuming 'result' from previous cells contains the review data
 df_busu = pd.DataFrame(np.array(result), columns=['ulasan'])
-# Replace 'gabung', 'daftar', and 'kepala' with their correct Pandas equivalents
-# Assuming you want to expand the 'ulasan' column into separate columns
+#Replace 'gabung', 'daftar', and 'kepala' with their correct Pandas equivalents
+#Assuming you want to expand the 'ulasan' column into separate columns
 df_busu = pd.concat([df_busu, pd.DataFrame(df_busu['ulasan'].tolist())], axis=1)
-# Display the first few rows of the DataFrame
+#Display the first few rows of the DataFrame
 df_busu.head()
 ![IMG_20241001_131612](https://github.com/user-attachments/assets/a9b731c7-e60b-4739-84e9-50408c7b3fb2)
 5). Jumlah data yang akan didapat
